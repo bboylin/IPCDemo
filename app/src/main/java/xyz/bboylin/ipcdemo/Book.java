@@ -8,7 +8,7 @@ import android.os.Parcelable;
  * 注意要和book.aidl在同一个包下
  */
 
-public class Book implements Parcelable{
+public class Book implements Parcelable {
     public int id;
     public String name;
     private String tag;
@@ -16,7 +16,7 @@ public class Book implements Parcelable{
     public Book(int id, String name) {
         this.id = id;
         this.name = name;
-        tag="正常";
+        tag = "正常";
     }
 
     public void setTag(String tag) {
@@ -26,6 +26,7 @@ public class Book implements Parcelable{
     protected Book(Parcel in) {
         id = in.readInt();
         name = in.readString();
+        tag = in.readString();
     }
 
     public static final Creator<Book> CREATOR = new Creator<Book>() {
@@ -49,10 +50,11 @@ public class Book implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(id);
         dest.writeString(name);
+        dest.writeString(tag);
     }
 
     @Override
     public String toString() {
-        return "book info : "+id+"/"+name+"/"+tag;
+        return "book info : " + id + "/" + name + "/" + tag;
     }
 }
