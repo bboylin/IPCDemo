@@ -37,11 +37,11 @@
         android:layout_height="wrap_content">
         <Button
             android:layout_weight="1"
-            android:id="@+id/btn_connect"
+            android:id="@+id/btn_connect_aidl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="连接" />
+            android:text="连接aidl" />
         <Button
             android:layout_weight="1"
             android:id="@+id/btn_add_book"
@@ -49,6 +49,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="添加书籍" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_connect_messenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="连接messenger" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="发送message" />
     </LinearLayout>
 
     <TextView
